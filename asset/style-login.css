@@ -1,0 +1,109 @@
+body{
+	margin: 0px;
+	padding: 0px;
+}
+
+*{
+	margin: 0px;
+	padding:0px;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+.wrapper{
+	display: grid;
+	width: 100%;
+	height: auto;
+	margin: 0px auto;
+	grid-template-areas: "header header header header header header"
+							"login login login login login login"
+							"footer footer footer footer footer footer";
+}
+
+/*bagian header awal*/
+header{
+	grid-area: header;
+	display: grid;
+	padding: 10px;
+	background-color: #333333;
+	grid-template-areas:"logo  nav";
+	grid-template-columns: 2fr 1fr;
+}
+
+nav{
+	grid-area: nav;
+}
+.header>section{
+	grid-area: logo;
+}
+header>section>a>img{
+	width: 100px;
+	margin-left: 50px;
+}
+ul{
+	margin-top: 30px;
+}
+header a{
+	color: whitesmoke;
+	text-decoration: none;
+	font-size: 20px;
+	margin-left: 10px;
+}
+/*bagian header akhir*/
+
+/*bagian login awal*/
+.login{
+	width: 500px;
+	margin: 5% auto auto auto; 
+	grid-area: login;
+}
+
+form{
+	border: 2px solid black;
+	padding:100px;
+	background-color: whitesmoke;
+	
+}
+
+input[type=text],input[type=password],input[type=email]{
+	font-size:; 
+	width: 300px;
+	height: 25px;
+	font-size: 20px;
+}
+
+input[value=LOGIN]{
+	width: 60px;
+	height: 30px;
+	background-color: white;
+}
+
+input[value=REGISTER]{
+	width: 75px;
+	height: 30px;
+	background-color: white;
+}
+label{
+	font-size: 30px;
+}
+
+center>a{
+	color: black;
+	text-decoration: underline;
+}
+/*bagian login akhir*/
+
+/*bagian footer awal*/
+
+footer{
+	width: 100%;
+	background-color: #333333;
+	grid-area: footer;
+	margin-top: 20%;		
+}
+
+footer>h3{
+	padding:20px;
+	color: whitesmoke; 
+}
+/*bagian footer akhir*/

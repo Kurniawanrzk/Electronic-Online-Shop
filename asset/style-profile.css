@@ -1,0 +1,81 @@
+body{
+	margin: 0px;
+	padding: 0px;
+}
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+.wrapper{
+	display: grid;
+	width: 100%;
+	height: auto;
+	margin: 0px auto;
+	grid-template-areas: "header header header header header header"
+							"login login login login login login"
+							"footer footer footer footer footer footer";
+}
+
+/*bagian header awal*/
+header{
+	grid-area: header;
+	display: grid;
+	padding: 10px;
+	background-color: #333333;
+	grid-template-areas:"logo  nav";
+	grid-template-columns: 2fr 1fr;
+}
+
+nav{
+	grid-area: nav;
+}
+.header>section{
+	grid-area: logo;
+}
+header>section>a>img{
+	width: 100px;
+	margin-left: 50px;
+}
+ul{
+	margin-top: 30px;
+}
+header a{
+	color: whitesmoke;
+	text-decoration: none;
+	font-size: 20px;
+	margin-left: 10px;
+}
+/*bagian header akhir*/
+
+/*bagian main profile*/
+.main{
+	grid-area: login;
+	width: 100%;
+	height: auto;
+}
+
+.sub-main{
+	margin: auto;
+	height: 5000px;		
+	width: 1000px;
+	border: 1px solid black;
+}
+
+/*bagian main profile*/
+
+/*bagian footer awal*/
+
+footer{
+	width: 100%;
+	background-color: #333333;
+	grid-area: footer;
+	margin-top: 20%;		
+}
+
+footer>h3{
+	padding:20px;
+	color: whitesmoke; 
+}
+/*bagian footer akhir*/
