@@ -1,12 +1,20 @@
 <?php require"php/function.php"; 
 session_start();
-if ($_SESSION['status'] != 'login') {
-	header('location:index.php');
+if($_SESSION['status'] == 'login') {
+	echo "<script>
+	function myFunction() {
+  document.getElementById('change').innerHTML =  'PROFILE'
+  document.getElementById('change').href =  'index-profle.php'
 }
-
-
-
-
+	</script>";
+}else{
+	echo "<script>
+	function myFunction() {
+  document.getElementById('change').innerHTML =  'LOGIN'
+  document.getElementById('change').href =  'index.php'
+}
+	</script>";
+}
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +25,7 @@ if ($_SESSION['status'] != 'login') {
 	<link rel="stylesheet" type="text/css" href="asset/style-product.css">
 	<title>	</title>
 </head>
-<body>
+<body onload="myFunction()">
 	<div class="wrapper">	
 		<!-- bagian header -->
 		<header>
@@ -29,7 +37,7 @@ if ($_SESSION['status'] != 'login') {
 			<a href="index-home.php">HOME</a>
 			<a href="index-produk.php">PRODUCT</a>
 			<a href="index-about.php">ABOUT</a>
-			<a href="index-profile.php"><?php echo $_SESSION['username']; ?></a>	
+			<a href="index.php" id="change"></a>	
 				</ul>
 		</nav>
 		</header>

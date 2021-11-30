@@ -1,21 +1,26 @@
-<?php 
-
-require"php/function.php"; 
+<?php require"php/function.php"; 
 
 session_start();
-if($_SESSION['status'] != 'login') {
-	
+if($_SESSION['status'] == 'login') {
+	echo "<script>
+	function myFunction() {
+  document.getElementById('change').innerHTML =  'PROFILE'
+  document.getElementById('change').href =  'index-profle.php'
 }
-
-
-
-
-
-
+	</script>";
+}else{
+	echo "<script>
+	function myFunction() {
+  document.getElementById('change').innerHTML =  'LOGIN'
+  document.getElementById('change').href =  'index.php'
+}
+	</script>";
+}
 ?>
 <!DOCTYPE html>
 <html>
 <head>
+
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0"> 
 	<title>WAVE | HOMEPAGE</title>
@@ -24,7 +29,7 @@ if($_SESSION['status'] != 'login') {
 	 <script src="jquery-3.5.1.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="asset/style.css">
 </head>
-<body>
+<body onload ="myFunction()">
 	<div class="wrapper">
 		<!-- bagian header -->
 		<header>
@@ -35,8 +40,8 @@ if($_SESSION['status'] != 'login') {
 		<ul>
 			<a href="index-home.php">HOME</a>
 			<a href="index-produk.php">PRODUCT</a>
-			<a href="index-about.php">ABOUT</a>
-			<a href="index-profle.php"><?php echo "hai ".$_SESSION['username']; ?></a>
+			<a href=".php">ABOUT</a>
+			<a href="index.php"id="change"></a>	
 		</ul>
 		</nav>
 		</header>

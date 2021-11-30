@@ -11,7 +11,10 @@ if (isset($_POST['register'])) {
 
 	$insert = mysqli_query($cnn,"INSERT into user(username,email,password) VALUES('$username','$email','$epassword')");
 	if ($insert) {
-		header('location:../projek/index.php');
+	session_start();
+	$_SESSION['status']	= 'acc.created';
+	header('location:../Electronic-Online-Shop/index.php');
+		
 	}
 
 }
@@ -27,13 +30,11 @@ if (isset($_POST['login'])) {
 
 	if ($cek>0) {
 		session_start();
+		$_SESSION['password'] = $password;
 		$_SESSION['username'] = $username;
 		$_SESSION['status'] ='login';
 		if (password_verify($password,$newpass)){
-			header('location:../projek/index-home.php');
-		}else{
-			session_start();
-			$_SESSION['status'] ='unlogin';
+			header('location:http://localhost/Electronic-Online-Shop/index-home.php');
 		}
 	}
 }	

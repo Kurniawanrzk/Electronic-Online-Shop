@@ -6,6 +6,7 @@ body{
 *{
 	margin: 0px;
 	padding: 0px;
+
 }
 
 .wrapper{
@@ -57,10 +58,22 @@ header a{
 }
 
 .sub-main{
-	margin: auto;
-	height: 5000px;		
+	margin: 5% auto auto auto;
+	height: 500px;		
 	width: 1000px;
-	border: 1px solid black;
+	border: 2px solid black;
+}
+
+.sub-main p{
+	font-size: 30px;
+	padding: 20px;
+	color: black;
+
+}
+.sub-main a{
+	font-size: 30px;
+	padding: 20px;
+	color: black;
 }
 
 /*bagian main profile*/

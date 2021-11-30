@@ -19,7 +19,7 @@
 			<a href="index-home.php">HOME</a>
 			<a href="index-produk.php">PRODUCT</a>
 			<a href="index-about.php">ABOUT</a>
-			<a href="index-profile.php"><?php echo $_SESSION['username']; ?></a>	
+			<a href="index.php">LOGIN</a>	
 		</ul>
 		</nav>
 		</header>

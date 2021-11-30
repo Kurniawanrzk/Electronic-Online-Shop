@@ -1,17 +1,29 @@
-<?php 	require 'php/function.php'; 
-
+<?php require"php/function.php"; 
 session_start();
-if ($_SESSION['status'] != 'login') {
-	header('location:index-home.php');
+if($_SESSION['status'] == 'login') {
+	echo "<script>
+	function myFunction() {
+  document.getElementById('change').innerHTML =  'PROFILE'
+  document.getElementById('change').href =  'index-profle.php'
+}
+	</script>";
+}else{
+	echo "<script>
+	function myFunction() {
+  document.getElementById('change').innerHTML =  'LOGIN'
+  document.getElementById('change').href =  'index.php'
+}
+	</script>";
 }
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="asset/style-profile.css">
 </head>
-<body>
+<body onload="myFunction()">
 <div class="wrapper">
 	<!-- bagian header -->
 		<header>
@@ -23,7 +35,7 @@ if ($_SESSION['status'] != 'login') {
 			<a href="index-home.php">HOME</a>
 			<a href="index-produk.php">PRODUCT</a>
 			<a href="index-about.php">ABOUT</a>
-			<a href=""><?php echo $_SESSION['username'];?></a>
+			<a href="index.php" id="change"></a>	
 		</ul>
 		</nav>
 		</header>
@@ -34,7 +46,9 @@ if ($_SESSION['status'] != 'login') {
 		<div class="main">
 
 			<div class="sub-main">	
-					<a href="logout.php">logout</a>
+					<p>USERNAME = <?php echo $_SESSION['username'] ?></p>
+					<p>EMAIL = <?php ?></p>
+					<a href="logout.php">LOGOUT</a>
 			</div>
 
 		</div>

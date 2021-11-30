@@ -1,4 +1,4 @@
-<?php require"php/function.php"; ?>
+<?php require"php/function.php";?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,7 +19,7 @@
 			<a href="index-home.php">HOME</a>
 			<a href="index-produk.php">PRODUCT</a>
 			<a href="index-about.php">ABOUT</a>
-			<a href="index-login.php">LOG-IN</a>
+			<a href="index.php">LOGIN</a>	
 		</ul>
 		</nav>
 		</header>
